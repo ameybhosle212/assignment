@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 no try there is,do or do not
+=======
+DO OR DO NOT THERE IS NO TRY
+>>>>>>> a4de63b (Changed yoda in author)
