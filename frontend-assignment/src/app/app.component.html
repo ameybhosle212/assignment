@@ -1,0 +1,51 @@
+<table border="1">
+  <tr>
+    <th>Panel Name</th>
+    <th>Mac Id</th>
+    <th>Lat </th>
+    <th>Longitude</th>
+    <th>Location</th>
+  </tr>
+  <tr *ngFor="let v of data.result">
+    <td><button class="btn btn-outline-primary" (click)="open1(content,v.panel_name)">{{v.panel_name}}</button></td>
+    <td>{{v.mac_id}}</td>
+    <td>{{v.Lat}}</td>
+    <td>{{v.Lng}}</td>
+    <td>Location</td>
+  </tr>
+</table>
+<br />
+
+<!-- <ng-template #content let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title" id="modal-basic-title">Profile update</h6>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+	</div>
+</ng-template> -->
+
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title" id="offcanvas-basic-title">Profile</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+		<form>
+			<div class="mb-3">
+				<div class="">
+					<h6>R Volt Status {{r_volt_status}}</h6><br/>
+					<h6>R Load Status {{r_load_status}}</h6><br/>
+					<h6>R MCB Status {{r_mcb_status}}</h6><br/>
+					<h6>R Pf Status {{r_pf_status}}</h6>
+					<!-- <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button> -->
+				</div>
+			</div>
+		</form>
+	</div>
+</ng-template>
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open1(content)">Launch demo offcanvas</button> -->
